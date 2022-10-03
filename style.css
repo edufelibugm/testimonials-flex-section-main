@@ -1,0 +1,331 @@
+/* EXTERNAL / STYLE GUIDE */
+.colors {
+    /* ### Primary */
+    color: hsl(263, 55%, 52%); /* Moderate violet */
+    color: hsl(217, 19%, 35%); /* Very dark grayish blue */
+    color: hsl(219, 29%, 14%); /* Very dark blackish blue */
+    color: hsl(0, 0%, 100%); /* White */
+
+    /* ### Neutral */
+    color: hsl(0, 0%, 81%); /* Light gray */
+    color: hsl(210, 46%, 95%); /* Light grayish blue */
+}
+/*
+    Note for text colors:
+
+    1. "Verified Graduate" has the same color as the person's name with 50% opacity
+    2. Review paragraphs inside the quotations have the same color as well, but are at 70% opacity
+*/
+
+/* FONTS */
+.font {
+    font-family: 'Barlow Semi Condensed', sans-serif;
+}
+
+/* GENERAL */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Barlow Semi Condensed', sans-serif;
+}
+
+html {
+    background-color: hsl(210, 46%, 95%);
+}
+
+main {
+    width: 100vw;
+    min-height: 100vh;
+    overflow: scroll;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: hsl(210, 46%, 95%);
+    gap: 30px;
+}
+
+h1 {
+    font-size: 20px;
+    font-weight: 600;
+}
+h2 {
+    font-size: 14px;
+    font-weight: 500;
+    color: hsl(0, 0%, 75%);
+}
+
+p {
+    font-size: 13px;
+}
+
+/* SPECIFY */
+.left-cont {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+    .art-cont {
+        display: flex;
+        gap: 30px;
+    }   
+    article {
+        display: flex;
+        flex-direction: column;
+        padding: 25px;
+        gap: 20px;
+        border-radius: 8px;
+        box-shadow: 0 0 10px rgba(128, 128, 128, 0.3);
+        text-align: left;
+    }
+        article .art-header {
+            display: flex;
+            gap: 10px;
+            align-items: center;
+        }
+            article .art-header img {
+                width: 30px;
+                height: 30px;
+                border-radius: 30px;
+            }
+            article .art-header p:first-of-type {
+                font-weight: 600;
+            }
+            article .art-header p:last-of-type {
+                color: hsl(0, 0%, 75%);
+            }
+
+    /* ARTICLE one START */
+    .article-one {
+        width: 540px;
+        height: 280px;
+        background-color: hsl(263, 55%, 52%);
+        background-image: url(images/bg-pattern-quotation.svg);
+        background-repeat: no-repeat;
+        background-position: 80% 0;
+        color: white;
+    }
+        .article-one h2 {
+            width: 520px;
+        }
+    /* ARTICLE one END */
+
+    /* ARTICLE two START */
+    .article-two {
+        width: 255px;
+        height: 280px;
+        background-color: hsl(217, 19%, 35%);
+        color: white;
+    }
+    /* ARTICLE two END */
+
+    /* ARTICLE three START */
+    .article-three {
+        width: 255px;
+        height: 280px;
+        background-color: hsl(0, 0%, 100%);
+        color: hsl(219, 29%, 14%);
+    }
+        .article-three h1 {
+            width: 170px;
+        }
+        .article-three h2 {
+            width: 200px;
+        }
+    /* ARTICLE three END */
+
+    /* ARTICLE four START */
+    .article-four {
+        width: 540px;
+        height: 280px;
+        background-color: hsl(219, 29%, 14%);
+        color: white;
+    }
+        .article-four h2 {
+            width: 500px;
+        }
+    /* ARTICLE four END */
+
+    /* ARTICLE five START */
+    .article-five {
+        width: 280px;
+        height: 585px;
+        background-color: hsl(0, 0%, 100%);
+        color: hsl(219, 29%, 14%);
+        padding: 30px;
+        gap: 30px;
+    }
+        .article-five h2 {
+            width: 210px;
+        }
+    /* ARTICLE five END */
+
+/* MEDIAQUERY SCREEN RESOLUTION */
+@media (max-width: 1150px) {
+    /* GENERAL */
+    main {
+        flex-direction: column;
+        padding: 50px 0;
+    }
+    /* SPECIFY */
+
+
+    /* ARTICLE five START */
+    .article-five {
+        width: 825px;
+        height: 285px;
+    }
+        .article-five h2 {
+            width: 100%;
+        }
+    /* ARTICLE five END */
+}
+
+@media (max-width: 830px) {
+    /* SPECIFY */
+        .art-cont {
+            flex-direction: column;
+        }   
+        article {
+            display: flex;
+            flex-direction: column;
+            padding: 25px;
+            gap: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(128, 128, 128, 0.3);
+            text-align: left;
+        }
+            article .art-header {
+                display: flex;
+                gap: 10px;
+                align-items: center;
+            }
+                article .art-header img {
+                    width: 30px;
+                    height: 30px;
+                    border-radius: 30px;
+                }
+
+        /* ARTICLE one START */
+        .article-one {
+            width: 420px;
+            height: 340px;
+            background-color: hsl(263, 55%, 52%);
+            background-image: url(images/bg-pattern-quotation.svg);
+            background-repeat: no-repeat;
+            background-position: 80% 0;
+            color: white;
+        }
+            .article-one h2 {
+                width: 100%;
+            }
+        /* ARTICLE one END */
+
+        /* ARTICLE two START */
+        .article-two {
+            width: 420px;
+            height: 230px;
+            background-color: hsl(217, 19%, 35%);
+            color: white;
+        }
+        /* ARTICLE two END */
+
+        /* ARTICLE three START */
+        .article-three {
+            width: 420px;
+            height: 220px;
+            background-color: hsl(0, 0%, 100%);
+            color: hsl(219, 29%, 14%);
+        }
+            .article-three h1 {
+                width: 100%;
+            }
+            .article-three h2 {
+                width: 100%;
+            }
+        /* ARTICLE three END */
+
+        /* ARTICLE four START */
+        .article-four {
+            width: 420px;
+            height: 320px;
+            background-color: hsl(219, 29%, 14%);
+            color: white;
+        }
+            .article-four h2 {
+                width: 100%;
+            }
+        /* ARTICLE four END */
+
+        /* ARTICLE five START */
+        .article-five {
+            width: 420px;
+            height: 400px;
+            background-color: hsl(0, 0%, 100%);
+            color: hsl(219, 29%, 14%);
+            padding: 30px;
+            gap: 30px;
+        }
+            .article-five h2 {
+                width: 100%;
+            }
+        /* ARTICLE five END */
+}
+
+@media (max-width: 425px) {
+    /* ARTICLE one START */
+    .article-one {
+        width: 300px;
+        height: 450px;
+        background-image: url(images/bg-pattern-quotation.svg);
+        background-position: 90% 0;
+    }
+        .article-one h2 {
+            width: 100%;
+        }
+    /* ARTICLE one END */
+
+    /* ARTICLE two START */
+    .article-two {
+        width: 300px;
+        height: 230px;
+    }
+    /* ARTICLE two END */
+
+    /* ARTICLE three START */
+    .article-three {
+        width: 300px;
+        height: 220px;
+    }
+        .article-three h1 {
+            width: 100%;
+        }
+        .article-three h2 {
+            width: 100%;
+        }
+    /* ARTICLE three END */
+
+    /* ARTICLE four START */
+    .article-four {
+        width: 300px;
+        height: 420px;
+    }
+        .article-four h2 {
+            width: 100%;
+        }
+    /* ARTICLE four END */
+
+    /* ARTICLE five START */
+    .article-five {
+        width: 300px;
+        height: 520px;
+        background-color: hsl(0, 0%, 100%);
+        color: hsl(219, 29%, 14%);
+        padding: 30px;
+        gap: 30px;
+    }
+        .article-five h2 {
+            width: 100%;
+        }
+    /* ARTICLE five END */
+}
